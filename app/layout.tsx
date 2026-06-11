@@ -16,8 +16,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "PilotHQ",
-  description: "PilotHQ command center",
+  title: "PilotHQ — Email & Calendar at the Speed of Thought",
+  description:
+    "A keyboard-first command center for Gmail and Google Calendar. Search, send, schedule, and automate your workflow.",
 };
 
 export default function RootLayout({
