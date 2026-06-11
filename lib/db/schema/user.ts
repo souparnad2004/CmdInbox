@@ -26,9 +26,10 @@ export const users = pgTable(
     corsairConnectionId: varchar("corsair_connection_id", { length: 255 }),
 
     lastLoginAt: timestamp("last_login_at", { withTimezone: true }),
-    createdAt: timestamp("created_at", { withTimezone: true }),
+    createdAt: timestamp("created_at", { withTimezone: true }).defaultNow().notNull(),
     updatedAt: timestamp("updated_at", { withTimezone: true })
       .defaultNow()
+      .notNull()
       .$onUpdate(() => new Date()),
   }
 );

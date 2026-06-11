@@ -30,7 +30,7 @@ export const connectedAccounts = pgTable("connected_accounts", {
     withTimezone: true,
   }),
 
-  isPrimary: boolean("is_primary").default(false),
+  isPrimary: boolean("is_primary").default(false).notNull(),
 
   createdAt: timestamp("created_at", {
     withTimezone: true,
@@ -46,3 +46,6 @@ export const accountsUserIdx = index("accounts_user_id_idx").on(
 export const accountsEmailProviderIdx = uniqueIndex(
   "accounts_email_provider_idx",
 ).on(connectedAccounts.email, connectedAccounts.provider);
+
+export type ConnectedAccount = typeof connectedAccounts.$inferSelect;
+export type NewConnectedAccount = typeof connectedAccounts.$inferInsert;
