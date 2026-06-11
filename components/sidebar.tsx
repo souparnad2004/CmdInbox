@@ -64,7 +64,7 @@ const NavItem = ({
           {badge && (
             <Badge
               variant="secondary"
-              className="bg-blue-500/20 text-blue-400 border-none px-1.5 h-5 min-w-[20px] flex items-center justify-center text-[10px] font-medium"
+              className="bg-blue-500/20 text-blue-400 border-none px-1.5 h-5 min-w-5 flex items-center justify-center text-[10px] font-medium"
             >
               {badge}
             </Badge>
@@ -145,7 +145,7 @@ export default function Sidebar({
     <aside
       className={cn(
         "hidden md:flex flex-col h-screen border-r border-border/20 bg-background transition-all duration-300 ease-in-out relative z-40",
-        collapsed ? "w-[64px]" : "w-[240px]"
+        collapsed ? "w-16" : "w-60"
       )}
     >
       {/* Brand Header */}

@@ -6,7 +6,6 @@ import {
   Calendar,
   Clock,
   Mail,
-  TrendingUp,
   Zap,
 } from "lucide-react"
 
