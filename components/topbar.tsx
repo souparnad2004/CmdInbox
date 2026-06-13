@@ -21,6 +21,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { LogoutButton } from "@/features/components/Logout"
 
 // Page title mapping
 const pageTitles: Record<string, string> = {
@@ -121,8 +122,7 @@ export default function Topbar() {
             </DropdownMenuItem>
             <DropdownMenuSeparator className="bg-border/30" />
             <DropdownMenuItem className="cursor-pointer text-red-400 hover:bg-red-500/10 focus:bg-red-500/10">
-              <LogOut className="w-4 h-4 mr-2" />
-              Sign Out
+              <LogoutButton/>
             </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
