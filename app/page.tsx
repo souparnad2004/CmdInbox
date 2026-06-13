@@ -172,10 +172,10 @@ export default function LandingPage() {
 
           <div className="hidden items-center gap-3 md:flex">
             <Button variant="ghost" className="text-white/70 hover:text-white" asChild>
-              <Link href="/login">Sign in</Link>
+              <Link href="/login?callbackUrl=/dashboard">Sign in</Link>
             </Button>
             <Button className="shadow-[0_0_20px_hsl(217_91%_60%/0.25)]" asChild>
-              <Link href="/signup">
+              <Link href="/signup?callbackUrl=/dashboard">
                 Get started
                 <ArrowRight className="ml-1.5 h-4 w-4" />
               </Link>
